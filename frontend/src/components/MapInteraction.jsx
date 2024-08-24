@@ -8,7 +8,7 @@ const carIcon = new L.DivIcon({
   html: `<div style="font-size: 48px; transform: scaleX(-1);">🚗</div>`,
   className: "car-icon",
   iconSize: [48, 48],
-  iconAnchor: [55,55],
+  iconAnchor: [24,24],
 });
 
 const MapClickHandler = ({ setClickedPosition }) => {
@@ -50,7 +50,7 @@ const MyLeafletMap = () => {
     const interval = setInterval(() => {
       if (data.length > 0) {
         if (count >= data.length) {
-          count
+          count =0
         }
 
         const { latitude, longitude } = data[count];
